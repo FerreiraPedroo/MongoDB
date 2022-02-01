@@ -11,7 +11,7 @@ const GetController = {
   findUserByName: async (req, res, next) => {
     userModel.find({ name: req.params.name }, (err, result) => {
       if (!!err) return next({ cod: "500", msg: "erro tentar novamente" });
-      return res.send(result);
+      return res.status(200).send(result);
     });
   }
 

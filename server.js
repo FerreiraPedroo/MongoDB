@@ -17,7 +17,7 @@ app.use(cors({
   "origin": "*",
   "methods": "GET, POST, PUT, DELETE",
   "credentials": true
-}))
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
@@ -40,6 +40,7 @@ app.use((err, req, res, next) => {
   try {
     await mongoose.connect(process.env.MONGODB_URL, optionsMongoDB);
     console.log(`# MongodbDB conected... host:'${mongoose.connections[0].host}' | port:'${mongoose.connections[0].port}' | db name:'${mongoose.connections[0].name}'`);
+
   } catch (error) {
     console.log("#");
     console.log("# Não foi possivel estabelecer conexão com o MongodbDB ...");

@@ -129,8 +129,6 @@ const updateAction = async () => {
     }, 2000)
   }
 }
-
-
 const deleteCard = (id) => {
   const documentModal = document.getElementById("modal")
   const data = allData.filter(element => element._id === id);
@@ -167,7 +165,6 @@ const deleteCard = (id) => {
     </div
   `
 }
-
 const deleteAction = async () =>{
   const _id = document.getElementById("modal-_id").innerText;
   const isActive = document.getElementById("modal-isActive").innerText;
@@ -193,26 +190,26 @@ const deleteAction = async () =>{
     });
   console.log(data)
 
-  // if (data.cod === "200") {
-  //   document.getElementById("mensagens").innerText = "UPDATE EFETUADO COM SUCESSO"
-  //   document.getElementById("mensagens").style.display = "flex";
-  //   setTimeout(() => {
-  //     document.getElementById("mensagens").style.display = "none";
-  //     document.getElementById("modal").style.display = "none";
-  //     document.getElementById("main-cards").innerText = "";
-  //     allCards();
-  //   }, 2000)
+  if (data.cod === "200") {
+    document.getElementById("mensagens").innerText = "DELETE EFETUADO COM SUCESSO"
+    document.getElementById("mensagens").style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("mensagens").style.display = "none";
+      document.getElementById("modal").style.display = "none";
+      document.getElementById("main-cards").innerText = "";
+      allCards();
+    }, 2000)
 
-  // } else {
-  //   document.getElementById("mensagens").innerText = "UPDATE NÃO EFETUADO"
-  //   document.getElementById("mensagens").style.display = "flex";
-  //   setTimeout(() => {
-  //     document.getElementById("mensagens").style.display = "none";
-  //     document.getElementById("modal").style.display = "none";
-  //     document.getElementById("main-cards").innerText = "";
-  //     allCards();
-  //   }, 2000)
-  // }
+  } else {
+    document.getElementById("mensagens").innerText = "DELETE NÃO EFETUADO"
+    document.getElementById("mensagens").style.display = "flex";
+    setTimeout(() => {
+      document.getElementById("mensagens").style.display = "none";
+      document.getElementById("modal").style.display = "none";
+      document.getElementById("main-cards").innerText = "";
+      allCards();
+    }, 2000)
+  }
 }
 
 
