@@ -1,6 +1,6 @@
 const userModel = require("../Models/Mongodb/model");
 
-const GetController = {
+const getController = {
   findAllUsers: async (req, res, next) => {
     userModel.find({}, (err, result) => {
       if (!!err) return next({ cod: "500", msg: "erro tentar novamente" });
@@ -17,4 +17,4 @@ const GetController = {
 
 }
 
-module.exports = GetController;
+module.exports = getController;

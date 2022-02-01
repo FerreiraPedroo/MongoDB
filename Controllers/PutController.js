@@ -1,6 +1,6 @@
 const userModel = require("../Models/Mongodb/model");
 
-const PutController = {
+const putController = {
   updateUser: async (req, res, next) => {
     const saveUserData = req.body;
 
@@ -11,4 +11,4 @@ const PutController = {
   }
 }
 
-module.exports = PutController;
+module.exports = putController;

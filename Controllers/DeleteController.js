@@ -1,6 +1,6 @@
 const userModel = require("../Models/Mongodb/model");
 
-const DeleteController = {
+const deleteController = {
   deleteUser: (req, res, next) => {
     const deleteUserId = req.body._id;
     userModel.findByIdAndRemove({ _id: deleteUserId }, (err, result) => {
@@ -10,4 +10,4 @@ const DeleteController = {
   }
 }
 
-module.exports = DeleteController;
+module.exports = deleteController;

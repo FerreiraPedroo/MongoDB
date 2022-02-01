@@ -1,6 +1,6 @@
 const userModel = require("../Models/Mongodb/model");
 
-const PostController = {
+const postController = {
   newUser: async (req, res, next) => {
     const newUserData = req.body;
 
@@ -30,4 +30,4 @@ const PostController = {
   }
 }
 
-module.exports = PostController;
+module.exports = postController;
