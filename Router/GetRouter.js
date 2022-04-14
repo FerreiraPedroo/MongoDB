@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const GetController = require("../Controllers/GetController");
+const getController = require("../Controllers/GetController");
 
-router.get("/find/all", GetController.findAllUsers);
-router.get("/find/name/:name", GetController.findUserByName);
+router.get("/find/all", getController.findAllUsers);
+router.get("/find/name/:name", getController.findUserByName);
 
 module.exports = router;
 

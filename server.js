@@ -27,7 +27,7 @@ app.use(postRouter);
 app.use(deleteRouter);
 
 app.use((err, req, res, next) => {
-  console.log(`# Erro > url: '${req.url}' | method: '${req.method}' | msg: ${JSON.stringify(err)}`);
+  console.log(`# Erro > method: ${req.method} > ${req.url} > body: '${JSON.stringify(req.body).substr(0,120)}' | 'msg resp: '${JSON.stringify(err)}'`);
   res.status(500).send(err);
 });
 

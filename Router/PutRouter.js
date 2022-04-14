@@ -1,7 +1,7 @@
 const router = require('express').Router();
-const PutController = require("../Controllers/PutController");
+const putController = require("../Controllers/PutController");
 
-router.put("/update/user", PutController.updateUser);
+router.put("/update/user", putController.updateUser);
 
 module.exports = router;
 
